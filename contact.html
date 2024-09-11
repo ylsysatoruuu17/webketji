@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yelsya Mochamad Yusup Website</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        }
+        body {
+    background-image: url("image/img2.jpg");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.background-div {
+    background-color: #47d7ff80; 
+}
+
+h1 {
+    color: #fff;
+}
+
+label{
+    background-color: #000;
+    color: #fff;
+}
+        
+        nav {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        nav a:hover {
+            color: #ccc;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        form input[type="submit"] {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        
+        form input[type="submit"]:hover {
+            background-color: #333;
+        }
+        
+        .success-message {
+            color: green;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        footer {    
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="contact.html">Contact</a> |
+        <a href="about.html">About me</a> |
+        <a href="galery.html">Galeri</a> 
+    </nav>
+
+    <main>
+        <h1>Contact Me</h1>
+        <form onsubmit="sendMessage(); return false;">
+            <label for="name">Name</label>
+            <input type="text" name="name" placeholder="Your name" required>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" placeholder="Your phone number" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Your email address" required>
+            <label for="message">Message</label>
+            <textarea name="message" placeholder="Your message..." rows="4" required></textarea>
+            <input type="submit" value="Kirim">
+        </form>
+        <div class="success-message" id="success-message">
+            Pesan sukses terkirim, Terimakasih...
+        </div>
+    </main>
+    <script>
+        function sendMessage() {
+            document.getElementById('success-message').style.display = 'block';
+            setTimeout(function() {
+                document.getElementById('success-message').style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+
+<hr>
+<footer style="text-align: center;">
+    <p style="color:#fcf8f8;background-color:#000 ;">Copyright &copy; 2024 Yelsya Mochamad Yusup.</p>
+</footer>
+
+</html>
